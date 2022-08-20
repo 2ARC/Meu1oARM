@@ -8,4 +8,4 @@ See it in action at https://www.youtube.com/watch?v=-mJok29Bw68
 
 Assembly video at https://www.youtube.com/watch?v=F536LSG_c2U&t=332s
 
-Software at 2ARC/Meu1oARM: Kit de desenvolvimento com mcu da NXP ARM M4F (github.com)
+Project page at https://oshwlab.com/MARCODEOLI/meu1oarm
