@@ -1,0 +1,95 @@
+/*!
+  \page MPU MPU (Init_MPU)
+**          This file implements the MPU (MPU) module initialization
+**          according to the Peripheral Initialization settings, and
+**          defines interrupt service routines prototypes.
+**
+
+- \subpage MPU_settings
+- \subpage MPU_regs_overview  
+- \subpage MPU_regs_details
+- \ref MPU_module "Component documentation" 
+\page MPU_regs_overview Registers Initialization Overview
+This page contains the initialization values for the registers of the peripheral(s) configured
+by the component. 
+<table>
+<tr><td colspan="4" class="ttitle1">MPU Initialization</td></tr>
+<tr><td class="ttitle2">Address</td><td class="ttitle2">Register</td><td class="ttitle2">Register Value</td><td class="ttitle2">Register Description</td></tr>
+<tr><td>0x4000D000</td><td>MPU_CESR</td>
+<td class="regNotResetVal">0x00815100</td>
+ <td>MPU_CESR register, peripheral MPU.</td></tr>
+</table>
+Color Denotes Reset Value
+<br/>
+\page MPU_regs_details Register Initialization Details
+This page contains detailed description of initialization values for the 
+registers of the peripheral(s) configured by the component. 
+
+<div class="reghdr1">MPU_CESR</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="5" rowspan="2">SPERR</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="4" rowspan="1">HRL</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+<td colspan="4"></td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="4" rowspan="1">NSP</td><td colspan="4" rowspan="1">NRGD</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">VLD</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+<td colspan="4"></td><td colspan="4"></td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>1</td><td>0</td><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4000D000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00815100</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00815101</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>27 - 31</td><td>SPERR</td><td>0x00</td><td>Slave Port n Error</td>
+<tr><td>16 - 19</td><td>HRL</td><td>0x00</td><td>Hardware Revision Level</td>
+<tr><td>12 - 15</td><td>NSP</td><td>0x00</td><td>Number Of Slave Ports</td>
+<tr><td>8 - 11</td><td>NRGD</td><td>0x00</td><td>Number Of Region Descriptors</td>
+<tr><td>0</td><td>VLD</td><td>0x00</td><td>Valid</td>
+</tr></table>
+*/
+/*!
+\page MPU_settings Component Settings
+\code
+**          Component name                                 : MPU
+**          Device                                         : MPU
+**          Clock gate                                     : Enabled
+**          MPU module                                     : Disabled
+**          Initialization                                 : 
+**            Call Init method                             : no
+**            Utilize after reset values                   : default
+<h1>
+\endcode
+*/

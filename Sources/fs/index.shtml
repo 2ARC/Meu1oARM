@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head><title>Meu1oARM</title></head>
+<body bgcolor="white" text="black" onload="myFunction()">
+<table width="100%">
+<tr valign="top"><td width="80">	  
+<a href="https://www.github.com/2ARC/"><img src="img/2ARC.png" border="0" alt="2ARC logo" title="2ARC logo"></a>
+</td><td width="1200">	  
+<h1>Meu1oARM</h1>
+<h2>Meu primeiro microcontrolador ARM. Kit de desenvolvimento ARM/M4F</h2>
+<p>LED6 batimento 1s</p>
+<h2>Ligue e desligue os reles, verifique os valores do ADC, acerte a data e a hora da placa</h2>
+<form method="get" action="/rele.cgi">
+<input value="1" name="rele" type="checkbox">  Rele do escudo 1</input>
+<input value="2" name="rele" type="checkbox">  Rele do escudo 2</input> 
+<input value="3" name="rele" type="checkbox">  Rele do escudo 3</input><br>
+<input value="4" name="rele" type="checkbox">  Rele do escudo 4</input>
+<input value="5" name="rele" type="checkbox">  Rele da placa</input>
+<input value="Enviar" type="submit"></form>
+<br>
+<form method="get" action="/data.cgi">
+<label for="data">Data:</label>
+<input type="date" id="data" name="data">
+<input value="Acertar a data" type="submit"></form>
+<form method="get" action="/hora.cgi">
+<label for="appt">Hora:</label>
+<input type="time" id="time" name="hora">
+<input value="Acertar a hora" type="submit"></form>
+<h2>Teste de interrupcao</h2>
+<h3>INT0 desliga e INT1 liga o rele da placa por rampa de descida</h3>
+<h2>Data: <!--#tag1-->
+Hora: <!--#tag2--> 
+ADC: <!--#tag3--></h2>  
+</td><td>
+&nbsp;
+</td></tr>
+</table>
+<script>
+function myFunction() {
+    setTimeout(function () {
+        window.location.reload(true);
+    }, 60000);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+target remote localhost:2331
+monitor reset
+monitor device MK64FX512xxx12
+load C:/Users/marco/workspace.kds/Meu1oARM/debug/Meu1oARM.elf
+monitor go
+disconnect
+quit
